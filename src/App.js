@@ -9,6 +9,10 @@ import Cadastrar from './screens/Register';
 import NavBar from './components/navbar'; 
 import Store from './screens/Lojas'; // <-- Add the import for the Store component
 
+import Painel from './screens/Painel';
+import Products from './screens/Products';
+import Brand from './components/Brand';
+import PublicLayout from './components/PublicLayout';
 function App() {
   return (
     <div className="App">
@@ -22,12 +26,19 @@ function App() {
         
         <main className="container">
           <Routes>
+              <Route element={<PublicLayout />}></Route>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Cadastrar />} />
             <Route path="/store" element={<Store />} />  {/* Store route */}
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
+
+                 {/* Layout ADMIN (sem navbar, sem logo) */}
+           <Route path="/painel" element={<Painel />}>
+           <Route path="products" element={<Products />} />
+           <Route path="brand" element={<Brand />} />
+        </Route>
           </Routes>
         </main>
       </BrowserRouter>

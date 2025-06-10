@@ -1,0 +1,59 @@
+.painelContainer {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+ 
+.menuLateral {
+  width: 250px;
+  background-color: #2e7d32;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+ 
+.tituloMenu {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+ 
+.menuLateral ul {
+  list-style: none;
+  padding: 0;
+}
+ 
+.linkMenu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+ 
+.linkMenu:hover {
+  background-color: #1b5e20;
+}
+ 
+.icone {
+  font-size: 1.2em;
+}
+ 
+.conteudo {
+  flex: 1;
+  background-color: white;
+  padding: 40px;
+}
+ 
+.conteudo h1 {
+  font-size: 28px;
+  color: #333;
+}
+ 
+.conteudo p {
+  color: #666;
+  margin-top: 10px;
+}
