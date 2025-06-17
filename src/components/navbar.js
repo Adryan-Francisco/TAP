@@ -1,6 +1,6 @@
 import styles from './NavBar.module.css';
 import { NavLink } from 'react-router-dom';
- 
+
 const NavBar = () => {
     return (
       <nav className={styles.navbar}>
@@ -16,9 +16,6 @@ const NavBar = () => {
           <li>
             <NavLink to="/register">Cadastrar-se</NavLink>          
           </li>
-            <li>
-            <NavLink to="/store">Lojas</NavLink>          
-          </li>
           <li>
             <NavLink to="/contact">Contato</NavLink>          
           </li>
@@ -29,5 +26,6 @@ const NavBar = () => {
       </nav>
     );
   };
- 
-  export default NavBar;
+
+  export default NavBar
+  

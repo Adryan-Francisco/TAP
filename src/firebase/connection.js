@@ -1,17 +1,22 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getFirestore } from 'firebase/firestore';
+import { getAuth } from "firebase/auth";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD-hnxTNrzdg92jMfqUfWThqHkANR3LtUw",
-  authDomain: "appboer-pizzaria.firebaseapp.com",
-  projectId: "appboer-pizzaria",
-  storageBucket: "appboer-pizzaria.firebasestorage.app",
-  messagingSenderId: "788689539486",
-  appId: "1:788689539486:web:9023cc75c52cedb547068f"
+  apiKey: "AIzaSyAAy7SQMQhMokDTehflTUbEHoahUEHU8LE",
+  authDomain: "applogin-70e48.firebaseapp.com",
+  databaseURL: "https://applogin-70e48-default-rtdb.firebaseio.com",
+  projectId: "applogin-70e48",
+  storageBucket: "applogin-70e48.appspot.com",
+  messagingSenderId: "488434513391",
+  appId: "1:488434513391:web:b7b5c92d6e9fe3ed48f21a",
+  measurementId: "G-ZQPK4F7MPW"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+const db = getFirestore(app);
+const auth = getAuth(app);
+
+export { db, app };
