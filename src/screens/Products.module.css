@@ -1,11 +1,11 @@
-/* Container principal do formulário */
+/* Container principal */
 .formWrapper {
   max-width: 700px;
   margin: 30px auto;
   padding: 20px 30px;
   background-color: #f9f9f9;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Formulário */
@@ -15,16 +15,25 @@
   gap: 15px;
 }
 
-/* Input do formulário */
-.form input[type="text"] {
+.form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.form input,
+.form select {
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 16px;
   width: 100%;
+  box-sizing: border-box;
 }
 
-/* Botão principal */
+/* Botões principais */
 .btn {
   padding: 12px;
   background-color: #4caf50;
@@ -32,28 +41,29 @@
   border-radius: 8px;
   color: white;
   font-weight: bold;
+  font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-/* Hover para botão */
 .btn:hover {
   background-color: #449d48;
 }
 
-/* Botões de editar/excluir */
+/* Botões de edição/exclusão */
 .btnEdit {
   padding: 8px 12px;
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 6px;
+  font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .btnEdit:hover {
-  background-color: #0066d6;
+  background-color: #005ecb;
 }
 
 .btnDelete {
@@ -62,6 +72,7 @@
   color: white;
   border: none;
   border-radius: 6px;
+  font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -70,9 +81,9 @@
   background-color: #b02a37;
 }
 
-/* Input de busca */
+/* Campo de busca */
 .searchInput {
-  margin-top: 20px;
+  margin-top: 25px;
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -80,7 +91,7 @@
   width: 100%;
 }
 
-/* Lista de marcas */
+/* Lista de produtos */
 .list {
   list-style: none;
   padding: 0;
@@ -91,18 +102,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 0;
+  padding: 14px 0;
   border-bottom: 1px solid #ddd;
 }
 
-/* Espaçamento entre texto e botões */
 .listItem span {
   flex-grow: 1;
   font-size: 16px;
 }
 
-/* Grupo de botões */
 .listItem div {
   display: flex;
   gap: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .formWrapper {
+    padding: 15px 20px;
+  }
+
+  .listItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .listItem div {
+    align-self: flex-end;
+  }
 }

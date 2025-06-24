@@ -1,4 +1,4 @@
-import NavBar from '../components/navbarss';
+import NavBar from '../components/navbar';
 import { Outlet } from 'react-router-dom';
 
 const PublicLayout = () => {

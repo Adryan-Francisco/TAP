@@ -1,37 +1,108 @@
+/* Container principal do formulário */
 .formWrapper {
-  max-width: 500px;
-  margin: 0 auto;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px 30px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
+/* Formulário */
 .form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
-label {
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-}
-
-input {
+/* Input do formulário */
+.form input[type="text"] {
   padding: 10px;
-  border: 1px solid #ccc;
   border-radius: 8px;
-  margin-top: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
 }
 
+/* Botão principal */
 .btn {
-  background-color: #2e7d32;
-  color: white;
-  padding: 10px;
+  padding: 12px;
+  background-color: #4caf50;
   border: none;
   border-radius: 8px;
-  cursor: pointer;
+  color: white;
   font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+/* Hover para botão */
 .btn:hover {
-  background-color: #1b5e20;
+  background-color: #449d48;
+}
+
+/* Botões de editar/excluir */
+.btnEdit {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnEdit:hover {
+  background-color: #0066d6;
+}
+
+.btnDelete {
+  padding: 8px 12px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnDelete:hover {
+  background-color: #b02a37;
+}
+
+/* Input de busca */
+.searchInput {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+}
+
+/* Lista de marcas */
+.list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Espaçamento entre texto e botões */
+.listItem span {
+  flex-grow: 1;
+  font-size: 16px;
+}
+
+/* Grupo de botões */
+.listItem div {
+  display: flex;
+  gap: 10px;
 }
